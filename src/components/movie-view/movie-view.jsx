@@ -2,9 +2,9 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import './movie-view.scss';
 
-export const MovieView = ({ movie, onBackClick }) => {
+export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
-  const movie = movies.find((m) => m.id === movieId);
+  const movie = movies.find((b) => b.id === movieId);
 
   return (
     <div>
