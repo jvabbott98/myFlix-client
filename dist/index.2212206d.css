@@ -10,6 +10,20 @@ img {
   width: 100%;
 }
 
+.deregister {
+  margin-top: 30px;
+}
+
+.form {
+  margin: 10px 0;
+  padding: 10px 10px 20px;
+  box-shadow: 0 3px 10px #00000032;
+}
+
+.formHeader {
+  text-align: center;
+}
+
 .my-flix {
   color: #4682b4;
 }
@@ -89,8 +103,8 @@ img {
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: Honeydew;
-  --bs-body-bg-rgb: 240, 255, 240;
+  --bs-body-bg: White;
+  --bs-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: #212529bf;
@@ -2669,11 +2683,11 @@ textarea.form-control-lg {
 }
 
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f0fff0, 0 0 0 .25rem #2e8b5740;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 .25rem #2e8b5740;
 }
 
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f0fff0, 0 0 0 .25rem #2e8b5740;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 .25rem #2e8b5740;
 }
 
 .form-range::-moz-focus-outer {

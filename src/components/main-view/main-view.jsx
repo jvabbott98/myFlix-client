@@ -118,7 +118,13 @@ export const MainView = () => {
                   <Col md={8}>
                     <ProfileView 
                     movies={movies}
-                    user={user} />
+                    user={user}
+                    onLoggedOut={() => {
+                      setUser(null);
+                      setToken(null);
+                      localStorage.clear()
+                    }}
+                     />
                   </Col>
                 )}
               </>

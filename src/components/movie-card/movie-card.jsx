@@ -37,7 +37,6 @@ export const MovieCard = ({ movie, user }) => {
           alert("Favorite failed");
         }
       }).catch((error) => {
-        console.error("Error:", error);
         alert("An error occurred, please try again.");
       });
     } else {
@@ -67,7 +66,6 @@ export const MovieCard = ({ movie, user }) => {
           alert("Favorite failed to remove");
         }
       }).catch((error) => {
-        console.error("Error:", error);
         alert("An error occurred, please try again.");
       });
     }
@@ -93,9 +91,7 @@ export const MovieCard = ({ movie, user }) => {
         </>
 
 
-        {/* <Button variant="primary" onClick={handleSubmit}>
-          Favorite
-        </Button> */}
+   
         <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
           <Button variant="link">Open</Button>
         </Link>
