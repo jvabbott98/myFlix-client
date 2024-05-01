@@ -26,10 +26,10 @@ export const SignupView = () => {
       }
     }).then((response) => {
       if (response.ok) {
-        alert("Signup successful");
+        alert("Movie added to favorites");
         window.location.reload();
       } else {
-        alert("Signup failed");
+        alert("Favorite failed");
       }
     });
   };
