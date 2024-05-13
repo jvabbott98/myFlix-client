@@ -9,6 +9,22 @@ import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+function filterMovies(searchTerm, movies) {
+  if (!searchTerm) {
+    return;
+  }
+  const term = searchTerm.toLowerCase().trim();
+  
+  const filteredMovies = movies.filter(movie => {
+    return(
+    movie.title.toLowerCase().includes(term) ||
+    movie.director.name.toLowerCase().includes(term) ||
+    movie.description.toLowerCase().includes(term)
+  );
+  });
+  if (filteredMovies.length === 0) { alert('No matches'); }
+  return filteredMovies;
+}
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -16,8 +32,12 @@ export const MainView = () => {
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
-
+  const [filterResults, setFilterResults] = useState([]);
+  // const [selectedMovie, setSelectedMovie] = useState(null);
+  const onFilter = (searchTerm) => {
+    const results = filterMovies(searchTerm, movies);
+    setFilterResults(results);
+  }
 
   useEffect(() => {
     if (!token) {
