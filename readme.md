@@ -14,4 +14,4 @@ React Router
 Parcel
 
 ## API
-This APP relies on MovieAPI, a REST api built with express and node.js. 
+This app relies on MovieAPI, a REST api built with express and node.js. 
